@@ -1,0 +1,53 @@
+/* Animation for modal */
+#dataModal {
+    transition: opacity 0.3s ease;
+    opacity: 0;
+    pointer-events: none;
+}
+
+#dataModal.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Table row hover effect */
+#dataTable tr:hover {
+    background-color: #f8fafc;
+}
+
+/* Loading spinner */
+.spinner {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Status badges */
+.status-badge {
+    @apply px-2 py-1 rounded-full text-xs font-medium;
+}
+
+.status-active {
+    @apply bg-green-100 text-green-800;
+}
+
+.status-inactive {
+    @apply bg-red-100 text-red-800;
+}
+
+.status-pending {
+    @apply bg-yellow-100 text-yellow-800;
+}
+
+/* Cache refresh animation */
+.refreshing {
+    animation: refreshSpin 1s linear infinite;
+}
+
+@keyframes refreshSpin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
